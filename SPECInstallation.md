@@ -37,7 +37,7 @@ Sources:
         cd tools/src
     ```
 
-    Navigate to:
+Navigate to:
 
     ``` bash
     tools/src/expat-1.95.8/conftools/
@@ -46,27 +46,27 @@ Sources:
     tools/src/make-3.80/config/
     ```
 
-    Run these commands in every folder above:
+Run these commands in every folder above:
 
     ``` bash
     wget -O config.guess 'https://git.savannah.gnu.org/gitweb/?p=config.git a=blob_plain;f=config.guess;hb=HEAD'
     wget -O config.sub 'https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD'
     ```
 
-    Navigate to `tools/src/make-3.80/glob/glob.c` and do the following:
+Navigate to `tools/src/make-3.80/glob/glob.c` and do the following:
 
-    1. Change `#if _GNU_GLOB_INTERFACE_VERSION == GLOB_INTERFACE_VERSION` to
-    `#if _GNU_GLOB_INTERFACE_VERSION >=GLOB_INTERFACE_VERSION`
+1. Change `#if _GNU_GLOB_INTERFACE_VERSION == GLOB_INTERFACE_VERSION` to
+`#if _GNU_GLOB_INTERFACE_VERSION >=GLOB_INTERFACE_VERSION`
 
-    2. Change `#if !defined __alloca && !defined GNU_LIBRARY` to `#if !defined __alloca && defined GNU_LIBRARY`
+2. Change `#if !defined __alloca && !defined GNU_LIBRARY` to `#if !defined __alloca && defined GNU_LIBRARY`
 
-    Navigate to `tools/src/specmd5sum/md5sum.c`. Comment out `#include "getline.h"`
+Navigate to `tools/src/specmd5sum/md5sum.c`. Comment out `#include "getline.h"`
 
-    Navigate to `tools/src/perl-5.87/makedepend.SH`. Find `-e '/^#.*<command line>/d'` and add `-e '/^#.*<command-line>/d' \` after it.
+Navigate to `tools/src/perl-5.87/makedepend.SH`. Find `-e '/^#.*<command line>/d'` and add `-e '/^#.*<command-line>/d' \` after it.
 
-    Navigate to `tools/src/perl-5.8.7/ext/IPC/SysV/SysV.xs` and comment out `#include <asm/page.h>`.
+Navigate to `tools/src/perl-5.8.7/ext/IPC/SysV/SysV.xs` and comment out `#include <asm/page.h>`.
 
-    Create a `my_source.sh` in `tools/src` with the following code:
+Create a `my_source.sh` in `tools/src` with the following code:
 
     ```bash
     #!/bin/bash
@@ -79,9 +79,9 @@ Sources:
     export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
     ```
 
-    Run `source my_setup.sh`.
+Run `source my_setup.sh`.
 
-    Build with `sudo PERLFLAGS="-A libs=-lm -A libs=-ldl" ./buildtools`.
+Build with `sudo PERLFLAGS="-A libs=-lm -A libs=-ldl" ./buildtools`.
 
 ## Running the Install Script
 
@@ -95,7 +95,7 @@ Move up to `SPEC_CPU2006v1.1`. Run `install.sh` with: `sudo PERLFLAGS="-A libs=-
         wget https://raw.githubusercontent.com/ccelio/Speckle/master/riscv.cfg
         ```
 
-    Navigate to the "Compiler selection" section and edit the CC, CXX and FC flag such that they read the following:
+2. Navigate to the "Compiler selection" section and edit the CC, CXX and FC flag such that they read the following:
 
         ```bash
         CC  = riscv64-linux-gnu-gcc -static -Wl,-Ttext-segment,0x10000
@@ -103,7 +103,7 @@ Move up to `SPEC_CPU2006v1.1`. Run `install.sh` with: `sudo PERLFLAGS="-A libs=-
         FC  = riscv64-linux-gnu-gfortran -static -Wl,-Ttext-segment,0x10000
         ```
 
-2. Build the benchmarks using:
+3. Build the benchmarks using:
 
         ``` bash
         . ./shrc
