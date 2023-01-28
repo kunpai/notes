@@ -14,7 +14,7 @@ Sources:
 
 [Pengfei Zuo](http://pfzuo.github.io/2016/06/12/Compile-and-debug-spec-cpu-2006-in-linux/)
 
-1. To mount and unmount the .iso file:
+## To mount and unmount the .iso file
 
     ``` bash
     mkdir tmnt
@@ -31,7 +31,7 @@ Sources:
     cd SPEC_CPU2006v1.1
     ```
 
-2. Building:
+## Building the Tools
 
     ``` bash
         cd tools/src
@@ -83,25 +83,30 @@ Sources:
 
     Build with `sudo PERLFLAGS="-A libs=-lm -A libs=-ldl" ./buildtools`.
 
-3. Move up to `SPEC_CPU2006v1.1`. Run `install.sh` with: `sudo PERLFLAGS="-A libs=-lm -A libs=-ldl" ./install.sh`
+## Running the Install Script
 
-4. Go into the config directory with `cd config`. Run the following command:
+Move up to `SPEC_CPU2006v1.1`. Run `install.sh` with: `sudo PERLFLAGS="-A libs=-lm -A libs=-ldl" ./install.sh`
 
-    ```bash
-    wget https://raw.githubusercontent.com/ccelio/Speckle/master/riscv.cfg
-    ```
+## Building with RISC-V Config
+
+1. Go into the config directory with `cd config`. Run the following command:
+
+        ```bash
+        wget https://raw.githubusercontent.com/ccelio/Speckle/master/riscv.cfg
+        ```
 
     Navigate to the "Compiler selection" section and edit the CC, CXX and FC flag such that they read the following:
 
-    ```bash
-    CC  = riscv64-linux-gnu-gcc -static -Wl,-Ttext-segment,0x10000
-    CXX = riscv64-linux-gnu-g++ -static -Wl,-Ttext-segment,0x10000
-    FC  = riscv64-linux-gnu-gfortran -static -Wl,-Ttext-segment,0x10000
-    ```
+        ```bash
+        CC  = riscv64-linux-gnu-gcc -static -Wl,-Ttext-segment,0x10000
+        CXX = riscv64-linux-gnu-g++ -static -Wl,-Ttext-segment,0x10000
+        FC  = riscv64-linux-gnu-gfortran -static -Wl,-Ttext-segment,0x10000
+        ```
 
-5. Build the benchmarks using:
+2. Build the benchmarks using:
 
-    ```bash
-    . ./shrc
-    runspec --config=riscv.cfg --action=build perlbench bzip2 GemsFDTD astar bwaves cactusADM calculix povray gobmk gromacs h264ref hmmer lbm leslie3d libquantum mcf milc namd omnetpp sjeng specrand sphinx3
-    ```
+        ``` bash
+        . ./shrc
+        runspec --config=riscv.cfg --action=build perlbench bzip2 GemsFDTD astar bwaves cactusADM calculix povray gobmk gromacs h264ref hmmer lbm leslie3d libquantum mcf milc namd omnetpp sjeng specrand sphinx3
+        ```
+    NOTE: Consider adding a `nohup` to the runspec command because compilation takes a long time. Also, the aforementioned 22 benchmarks are the only ones that fully compile on the board as of 27th Jan 2023.
