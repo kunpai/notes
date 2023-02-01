@@ -1,0 +1,18 @@
+
+ Performance counter stats for 'runspec --iteration 1 --config riscv --size train --noreportable --nobuild namd':
+
+          95921.83 msec task-clock                #    0.906 CPUs utilized          
+               150      context-switches          #    1.564 /sec                   
+                 0      cpu-migrations            #    0.000 /sec                   
+             41126      page-faults               #  428.745 /sec                   
+      114542879388      cycles                    #    1.194 GHz                      (25.04%)
+       54069901524      instructions              #    0.47  insn per cycle           (50.01%)
+     <not counted>      branches                                                      (0.00%)
+     <not counted>      branch-misses                                                 (0.00%)
+
+     105.921137167 seconds time elapsed
+
+      94.993151000 seconds user
+       0.930669000 seconds sys
+
+

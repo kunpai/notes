@@ -1,0 +1,18 @@
+
+ Performance counter stats for 'runspec --iteration 1 --config riscv --size ref --noreportable --nobuild gobmk':
+
+        2399533.47 msec task-clock                #    0.995 CPUs utilized          
+              2459      context-switches          #    1.025 /sec                   
+                 8      cpu-migrations            #    0.003 /sec                   
+             73334      page-faults               #   30.562 /sec                   
+     2864908470492      cycles                    #    1.194 GHz                      (25.02%)
+     2061749420255      instructions              #    0.72  insn per cycle           (49.99%)
+     <not counted>      branches                                                      (0.00%)
+     <not counted>      branch-misses                                                 (0.00%)
+
+    2411.475859214 seconds time elapsed
+
+    2396.871233000 seconds user
+       2.658462000 seconds sys
+
+

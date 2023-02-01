@@ -1,0 +1,18 @@
+
+ Performance counter stats for 'runspec --iteration 1 --config riscv --size ref --noreportable --nobuild bwaves':
+
+       10030075.99 msec task-clock                #    0.999 CPUs utilized          
+              7999      context-switches          #    0.798 /sec                   
+                 8      cpu-migrations            #    0.001 /sec                   
+           1314638      page-faults               #  131.070 /sec                   
+    11971260933497      cycles                    #    1.194 GHz                      (25.03%)
+     1694110288389      instructions              #    0.14  insn per cycle           (49.99%)
+     <not counted>      branches                                                      (0.00%)
+     <not counted>      branch-misses                                                 (0.00%)
+
+   10041.732204746 seconds time elapsed
+
+   10003.829131000 seconds user
+      26.250392000 seconds sys
+
+

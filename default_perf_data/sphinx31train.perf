@@ -1,0 +1,18 @@
+
+ Performance counter stats for 'runspec --iteration 1 --config riscv --size train --noreportable --nobuild sphinx3':
+
+         130736.17 msec task-clock                #    0.916 CPUs utilized          
+               257      context-switches          #    1.966 /sec                   
+                 4      cpu-migrations            #    0.031 /sec                   
+             45366      page-faults               #  347.004 /sec                   
+      155973102892      cycles                    #    1.193 GHz                      (25.03%)
+       50075157927      instructions              #    0.32  insn per cycle           (50.00%)
+     <not counted>      branches                                                      (0.00%)
+     <not counted>      branch-misses                                                 (0.00%)
+
+     142.752414365 seconds time elapsed
+
+     129.222216000 seconds user
+       1.515689000 seconds sys
+
+

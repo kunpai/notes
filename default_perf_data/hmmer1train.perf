@@ -1,0 +1,18 @@
+
+ Performance counter stats for 'runspec --iteration 1 --config riscv --size train --noreportable --nobuild hmmer':
+
+         386965.77 msec task-clock                #    0.975 CPUs utilized          
+               367      context-switches          #    0.948 /sec                   
+                 4      cpu-migrations            #    0.010 /sec                   
+             29682      page-faults               #   76.704 /sec                   
+      462203467876      cycles                    #    1.194 GHz                      (25.01%)
+      380770754389      instructions              #    0.82  insn per cycle           (49.99%)
+     <not counted>      branches                                                      (0.00%)
+     <not counted>      branch-misses                                                 (0.00%)
+
+     396.969030264 seconds time elapsed
+
+     386.397862000 seconds user
+       0.570494000 seconds sys
+
+

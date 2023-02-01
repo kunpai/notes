@@ -1,0 +1,18 @@
+
+ Performance counter stats for 'runspec --iteration 1 --config riscv --size ref --noreportable --nobuild leslie3d':
+
+       10411448.68 msec task-clock                #    0.999 CPUs utilized          
+             10620      context-switches          #    1.020 /sec                   
+                42      cpu-migrations            #    0.004 /sec                   
+             60869      page-faults               #    5.846 /sec                   
+    12426487808405      cycles                    #    1.194 GHz                      (25.02%)
+     1900244785748      instructions              #    0.15  insn per cycle           (49.98%)
+     <not counted>      branches                                                      (0.00%)
+     <not counted>      branch-misses                                                 (0.00%)
+
+   10421.241312894 seconds time elapsed
+
+   10409.648998000 seconds user
+       1.753110000 seconds sys
+
+

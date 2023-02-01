@@ -1,0 +1,18 @@
+
+ Performance counter stats for 'runspec --iteration 1 --config riscv --size train --noreportable --nobuild gromacs':
+
+         864085.89 msec task-clock                #    0.989 CPUs utilized          
+              1654      context-switches          #    1.914 /sec                   
+                 5      cpu-migrations            #    0.006 /sec                   
+             33357      page-faults               #   38.604 /sec                   
+     1032106238430      cycles                    #    1.194 GHz                      (25.02%)
+      340310584716      instructions              #    0.33  insn per cycle           (50.00%)
+     <not counted>      branches                                                      (0.00%)
+     <not counted>      branch-misses                                                 (0.00%)
+
+     874.130568412 seconds time elapsed
+
+     863.262822000 seconds user
+       0.819451000 seconds sys
+
+
